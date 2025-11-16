@@ -27,14 +27,6 @@ scrape_configs:
           service: 'order-management'
           application: 'paklog'
 
-  - job_name: 'warehouse-operations'
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['host.docker.internal:8083']
-        labels:
-          service: 'warehouse-operations'
-          application: 'paklog'
-
   - job_name: 'cartonization'
     metrics_path: '/actuator/prometheus'
     static_configs:

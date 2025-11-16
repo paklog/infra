@@ -124,8 +124,8 @@ docker-compose ps
 ### 3. Rebuild Microservices
 ```bash
 # From paklog root directory
-for service in product-catalog order-management warehouse-operations \
-               shipment-transportation inventory cartonization; do
+for service in product-catalog order-management \
+               shipment-transportation inventory cartonization wave-planning-service; do
   echo "Building $service..."
   cd $service && mvn clean package -DskipTests && cd ..
 done
@@ -141,7 +141,7 @@ cd product-catalog && mvn spring-boot:run
 cd order-management && mvn spring-boot:run
 
 # Terminal 3
-cd warehouse-operations && mvn spring-boot:run
+cd wave-planning-service && mvn spring-boot:run
 
 # ... and so on
 ```

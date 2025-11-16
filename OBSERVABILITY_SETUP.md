@@ -6,10 +6,10 @@ This guide explains how to configure all Paklog microservices to send metrics, l
 ## Services Configured
 - ✅ product-catalog
 - ✅ order-management
-- ✅ warehouse-operations
 - ✅ shipment-transportation
 - ✅ inventory
 - ✅ cartonization
+- ✅ wave-planning-service
 
 ## Dependencies Added
 
@@ -26,7 +26,7 @@ All services now include:
 Copy `/infra/logback-spring.xml` to each service's `src/main/resources/` directory:
 
 ```bash
-for service in product-catalog order-management warehouse-operations shipment-transportation inventory cartonization; do
+for service in product-catalog order-management shipment-transportation inventory cartonization wave-planning-service; do
   cp infra/logback-spring.xml ../$service/src/main/resources/logback-spring.xml
 done
 ```

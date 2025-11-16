@@ -17,7 +17,7 @@ This infrastructure stack provides:
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        PakLog Services                           │
-│  (product-catalog, order-management, warehouse-operations, etc.) │
+│  (product-catalog, order-management, cartonization, etc.)        │
 └────────────────────┬────────────────────────────────────────────┘
                      │
      ┌───────────────┴────────────────┐
